@@ -16,7 +16,7 @@ We expect that a deliverable covers between 1 and 100 tasks/activities. Our prod
 6. approve links
 7. trigger payment
 
-The view should basically look like this. But there is room for improvements.
+## The view should basically look like this. But there is room for improvements.
 ![pasted image at 2017_10_09 10_29 am](https://user-images.githubusercontent.com/20090930/31448499-e03dbe78-aea4-11e7-9c6a-1b3d53dcd7d6.png)
 
 ## Install
