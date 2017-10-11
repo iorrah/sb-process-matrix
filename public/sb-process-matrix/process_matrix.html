@@ -1,0 +1,19 @@
+<md-card>
+
+  <md-card-title class="less-blue">
+    <div layout="column">
+      <h3>Material Design process visualization ...</h3>
+      <p>Content: 50 deliverables all having the same process with 8 steps</p>
+    </div>
+  </md-card-title>
+
+  <md-card-content layout="row" layout-align="space-between">
+
+    <div ng-repeat="deliverable in $ctrl.sbModel">
+       :: ->> {{deliverable.name}}
+    </div>
+
+  </md-card-content>
+
+</md-card>
+
