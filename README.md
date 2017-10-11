@@ -16,9 +16,22 @@ We expect that a deliverable covers between 1 and 100 tasks/activities. Our prod
 6. approve links
 7. trigger payment
 
-The view should look like this:
+The view should basically look like this. But there is room for improvements.
+![pasted image at 2017_10_09 10_29 am](https://user-images.githubusercontent.com/20090930/31448499-e03dbe78-aea4-11e7-9c6a-1b3d53dcd7d6.png)
 
-### Credit to
+## Install
+Install dependencies via npm
+```
+    npm install
+```
+
+## Run
+Run locally
+```
+    npm run start
+```
+
+## Credit
 project setup taken from 
 * https://www.codementor.io/narthur157/how-to-modernized-angularjs-1-5-with-es6-webpack-mocha-sass-and-components-7yp0apprt
 * https://github.com/narthur157/modern-angularjs-starter
