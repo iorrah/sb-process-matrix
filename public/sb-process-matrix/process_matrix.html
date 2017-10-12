@@ -17,56 +17,39 @@
           <td>Step 5</td>
           <td>Step 6</td>
           <td>Step 7</td>
+          <td>Step 8</td>
         </tr>
       </thead>
 
-      <tbody>
+      <tbody id="sortable">
         <tr ng-repeat="deliverable in $ctrl.sbModel" ng-value="{{$index}}">
           <td>
-            Deliverable {{$index + 1}}
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            {{deliverable.name}}
           </td>
           
-          <td>
-            <!-- {{deliverable.name}} -->
-            <label class="label--checkbox">
+          <td ng-repeat="step in deliverable.activities" ng-value="{{$index}}">
+            <label class="label--checkbox" ng-if="step.progress == 100">
               <input type="checkbox" class="checkbox" checked>
             </label>
-          </td>
 
-          <td>
-            <label class="label--checkbox">
-              <input type="checkbox" class="checkbox" checked>
+            <label class="label--checkbox" ng-if="step.progress == 50">
+              <input type="checkbox" class="checkbox">
             </label>
-          </td>
-          
-          <td>
-            <label class="label--checkbox">
-              <input type="checkbox" class="checkbox" checked>
-            </label>
-          </td>
-          
-          <td>
-            <label class="label--checkbox">
-              <input type="checkbox" class="checkbox" checked>
-            </label>
-          </td>
 
-          <td>
-            <label class="label--checkbox">
-              <input type="checkbox" class="checkbox" checked>
+            <label class="label--checkbox" ng-if="step.progress == 0">
+              <input type="checkbox" class="checkbox">
             </label>
-          </td>
 
-          <td>
-            <label class="label--checkbox">
-              <input type="checkbox" class="checkbox" checked>
-            </label>
-          </td>
-
-          <td>
-            <label class="label--checkbox">
-              <input type="checkbox" class="checkbox" checked>
-            </label>
+            <div class="details">
+              <p>{{step.id}}</p>
+              <p>{{step.name}}</p>
+              <p>{{step.utcStart}}</p>
+              <p>{{step.utcEnd}}</p>
+              <p>{{step.progress}}</p>
+              <p>{{step.step}}</p>
+              <p>{{step.color}}</p>
+            </div>
           </td>
         </tr>
       </tbody>
