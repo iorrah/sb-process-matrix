@@ -13,7 +13,11 @@ class ProcessMatrixController {
    * @return {undefined} undefined
    */
   $onInit () {
-    console.log('input bindings are defined!', this.sbModel);
+    $(function() {
+      $('#sortable').sortable({
+        placeholder: 'blank-row'
+      });
+    });
   }
 }
 

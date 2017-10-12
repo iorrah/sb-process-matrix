@@ -93,6 +93,19 @@ header {
     tr {
       padding: 0;
 
+      &.ui-sortable-helper {
+        border: .15rem dotted #aaa;
+
+        td { 
+          width: 12.5%; 
+
+          &,
+          > label > .checkbox:after {
+            background-color: #eee;
+          }
+        }
+      }
+
       td {
         padding: 3rem .5rem;
         background-color: #fff;
@@ -102,8 +115,14 @@ header {
         &:first-child {
           background-color: #fff;
           white-space: nowrap;
-          text-align: center;
+          text-align: left;
+          cursor: pointer;
+          padding: 0 1rem;
+
+          i { margin: 0 .6rem 0; }
         }
+
+        .details { display: none; }
       }
     }
   }
@@ -125,6 +144,7 @@ header {
   margin: 0 1rem 0 0;
   cursor: pointer;
 }
+
 .checkbox:before {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -135,8 +155,9 @@ header {
   z-index: 1;
   width: 1rem;
   height: 1rem;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #a7d5d6;
 }
+
 .checkbox:checked:before {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -148,6 +169,7 @@ header {
   border-top-style: none;
   border-right-style: none;
 }
+
 .checkbox:after {
   content: "";
   position: absolute;
@@ -158,6 +180,7 @@ header {
   background: #fff;
   cursor: pointer;
 }
+
 
 .button--round {
   -webkit-transition: 0.3s background ease-in-out;
@@ -172,11 +195,13 @@ header {
   text-decoration: none;
   text-align: center;
 }
+
 .button--round i {
   font-size: 1rem;
   line-height: 220%;
   vertical-align: middle;
 }
+
 .button--round:hover {
   background: #3b50ce;
 }
@@ -203,6 +228,7 @@ header {
     -webkit-transform: translateY(6.25rem);
     transform: translateY(6.25rem);
   }
+
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -213,6 +239,7 @@ header {
     -webkit-transform: translateY(6.25rem);
     transform: translateY(6.25rem);
   }
+
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
