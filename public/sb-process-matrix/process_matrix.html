@@ -1,19 +1,75 @@
-<md-card>
+<main>
+  <header>
+    <h1>
+      Process Viewer
+    </h1>
+  </header>
 
-  <md-card-title class="less-blue">
-    <div layout="column">
-      <h3>Material Design process visualization ...</h3>
-      <p>Content: 50 deliverables all having the same process with 8 steps</p>
-    </div>
-  </md-card-title>
+  <section class="matrix">
+    <table>
+      <thead>
+        <tr>
+          <td>&nbsp;</td>
+          <td>Step 1</td>
+          <td>Step 2</td>
+          <td>Step 3</td>
+          <td>Step 4</td>
+          <td>Step 5</td>
+          <td>Step 6</td>
+          <td>Step 7</td>
+        </tr>
+      </thead>
 
-  <md-card-content layout="row" layout-align="space-between">
+      <tbody>
+        <tr ng-repeat="deliverable in $ctrl.sbModel" ng-value="{{$index}}">
+          <td>
+            Deliverable {{$index + 1}}
+          </td>
+          
+          <td>
+            <!-- {{deliverable.name}} -->
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
 
-    <div ng-repeat="deliverable in $ctrl.sbModel">
-       :: ->> {{deliverable.name}}
-    </div>
+          <td>
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
+          
+          <td>
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
+          
+          <td>
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
 
-  </md-card-content>
+          <td>
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
 
-</md-card>
+          <td>
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
 
+          <td>
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" checked>
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
